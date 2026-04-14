@@ -1,11 +1,13 @@
 let namabarang = document.getElementById("nama barang");
 let jumlah = document.getElementById("jumlah");
 let keterangan = document.getElementById("keterangan");
+let img = document.getElementById("img");
 
 function simpan() {
     console.log(namabarang.value)
     console.log(jumlah.value)
     console.log(keterangan.value)
+    console.log(img.value)
 
     // localStorage.setItem("npm", npm.value)
     // localStorage.setItem("nama", nama.value)
@@ -24,7 +26,8 @@ function simpan() {
     data.push({
         namabarang: namabarang.value,
         jumlah: jumlah.value,
-        keterangan: keterangan.value
+        keterangan: keterangan.value,
+        img: img.value
     })
     console.log(data)
 
@@ -50,7 +53,8 @@ function tampil() {
         innerHTML += `<div class="col-lg-4 col-md-6">
         <h4 class="text-primary">${element.namabarang}</h4>
         <h6 class="text-danger">${element.jumlah}</h6>
-        <img class="img-fluid" src=${element.keterangan}/>
+        <h5 class="text-danger">${element.keterangan}</h5>
+        <img class="img-fluid" src=${element.img}/>
         </div>`
     });
 }
