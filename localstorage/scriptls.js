@@ -13,6 +13,7 @@ function simpan() {
     // localStorage.setItem("nama", nama.value)
 
     // kalo local storage blm ad isi
+    
     if(localStorage.getItem("mahasiswa")===null) {
         // simpan array kosong []
         localStorage.setItem("mahasiswa", "[]")
